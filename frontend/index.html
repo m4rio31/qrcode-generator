@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carica Documento e Genera QR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Carica il tuo Documento</h1>
+        <div class="card">
+            <input type="file" id="documentInput" accept=".pdf, .doc, .docx, .txt" class="file-input">
+            <label for="documentInput" class="file-label">
+                <span id="fileName">Nessun file selezionato</span>
+                <span class="browse-button">Scegli file</span>
+            </label>
+            <button id="uploadButton" class="upload-button">Carica Documento</button>
+        </div>
+
+        <div id="resultContainer" class="result-container hidden">
+            <h2>Il tuo codice QR</h2>
+            <p>Scansiona il codice per visualizzare il documento caricato.</p>
+            <img id="qrCodeImage" src="" alt="Codice QR del documento" class="qr-code-image">
+            <p id="documentUrl" class="document-url"></p>
+        </div>
+
+        <div id="messageBox" class="message-box hidden">
+            <p id="messageText"></p>
+            <button id="closeMessage" class="close-button">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
